@@ -198,17 +198,17 @@ start.addEventListener("click", function () {
             case "easy":
                 rows = 4;
                 cols = 4;
-                temp = 20;
+                temp = 15;
                 break;
             case "medium":
                 rows = 5;
                 cols = 5;
-                temp = 30;
+                temp = 20;
                 break;
             case "hard":
-                rows = 10;
-                cols = 10;
-                temp = 0;
+                rows = 8;
+                cols = 8;
+                temp = 60;
                 break;
             default:
                 return home.click();
