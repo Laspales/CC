@@ -1,0 +1,307 @@
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.container {
+    position: fixed;
+    top: 5vh;
+    left: 5vw;
+    max-width: 700px;
+    border: 1px solid;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    margin-top: 0;
+    margin-bottom: 45px;
+}
+
+h1 span {
+    margin-right: 100px;
+}
+
+h1 img {
+    vertical-align: middle;
+}
+
+#rules {
+    margin-top: 20px;
+}
+
+#game {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+table {
+    border: 3px solid rgba(198, 146, 16, 0.5);
+    border-collapse: collapse;
+    width: 85vw;
+    max-width: 500px;
+    margin: auto;
+}
+
+td {
+    border: 3px solid rgba(198, 146, 16, 0.5);
+    text-align: center;
+    padding: 8px;
+    cursor: pointer;
+}
+
+td:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+
+}
+
+select {
+    font-size: 1.3rem;
+    padding: 5px 10px;
+    border: 1px solid;
+    border-radius: 5px;
+    background-color: rgba(198, 146, 16, 0.5);
+    color: white;
+    cursor: pointer;
+}
+
+#start {
+    all: unset;
+    font-size: 1.2rem;
+    padding: 5px 10px;
+    border: 1px solid;
+    border-radius: 5px;
+    background-color: rgba(250, 0, 0, 0.6);
+    color: white;
+    cursor: pointer;
+}
+
+#regen {
+    all: unset;
+    cursor: pointer;
+    display: none;
+}
+
+#regen::after {
+    content: "restart";
+    position: relative;
+    top: 2vw;
+    left: -5vh;
+    transform: translateX(-50%);
+    background-color: #222;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.6rem;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+    z-index: 10;
+}
+
+#regen:hover::after {
+    opacity: 1;
+}
+
+#home {
+    all: unset;
+    cursor: pointer;
+    display: none;
+}
+
+#home::after {
+    content: "home";
+    position: relative;
+    top: 2vw;
+    left: -5vh;
+    transform: translateX(-50%);
+    background-color: #222;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.6rem;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+    z-index: 10;
+}
+
+#home:hover::after {
+    opacity: 1;
+}
+
+#stopp {
+    all: unset;
+    margin-top: 20px;
+    padding: 5px;
+    border: 1px solid;
+    border-radius: 5px;
+    background-color: rgba(250, 0, 0, 0.8);
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+#minuteur,
+#score, #finalScore {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+#minuteur {
+   padding: 0 5px 0px 5px;
+  
+}
+#score {
+    color: white;
+    border: 1px solid rgba(0, 0, 250, 0.7);
+    border-radius: 5px;
+    padding: 5px;
+    background-color: rgba(0, 0, 250, 0.7);
+    display: none;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 900px) {
+    .container {
+        top: 2vh;
+        left: 2vw;
+        right: 2vw;
+        max-width: calc(100vw - 4vw);
+        padding: 15px;
+    }
+    select{
+        font-size: 1rem !important;
+        width: 70%;
+        max-width: 100%;
+        padding: 8px 10px;
+        box-sizing: border-box;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        position: static;
+        margin: 10px auto;
+        width: calc(100vw - 20px);
+        max-width: 100%;
+        padding: 12px;
+        border-radius: 8px;
+        box-sizing: border-box;
+    }
+
+    h1 {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-bottom: 20px;
+        font-size: 1.1rem;
+    }
+
+    h1 span {
+        margin-right: 0;
+        flex: 1;
+        font-size: 1rem;
+    }
+
+    .description {
+        font-size: 0.9rem;
+    }
+
+    .slgo {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 10px !important;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    select {
+        font-size: 1rem !important;
+        width: 100%;
+        max-width: 100%;
+        padding: 8px 10px;
+        box-sizing: border-box;
+    }
+
+    select option {
+        font-size: 14px !important;
+        padding: 0 !important;
+    }
+
+    #start {
+        font-size: 1rem !important;
+        width: 100%;
+        padding: 8px 10px;
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    #game {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    table {
+        width: 100% !important;
+        max-width: 100%;
+        font-size: 0.82rem;
+    }
+
+    td {
+        padding: 5px 3px;
+        font-size: 0.82rem;
+    }
+
+    #infos {
+        width: 100%;
+        text-align: center;
+    }
+
+    #minuteur,
+    #score,
+    #finalScore {
+        font-size: 1rem;
+    }
+
+    #stopp {
+        width: 100%;
+        padding: 8px;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    #regen::after,
+    #home::after {
+        top: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 380px) {
+    h1 {
+        font-size: 0.9rem;
+    }
+
+    td {
+        padding: 3px 2px;
+        font-size: 0.72rem;
+    }
+
+    select,
+    #start {
+        font-size: 0.85rem !important;
+        padding: 6px 8px;
+    }
+    
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C&C &star;</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+            <h1>
+                <span>Count and Click
+                    <img src="images/brain3.gif" alt="logo" class="logo"
+                        style="width: 40px; height: 40px; mix-blend-mode: multiply;">
+                </span>
+                <button id="regen"><img src="images/restart.gif" alt="Restart"
+                        style="width: 30px; height: 30px;"></button>
+                <button id="home"><img src="images/menu1.gif" alt="Home" style="width: 30px; height: 30px;"></button>
+            </h1>
+        <div id="rules">
+            <p class="description">
+                Click the numbers in ascending order before time runs out.<br />
+                Correct clicks increase your score, while mistakes decrease it!
+            </p>
+            <p class="description" style="margin-bottom: 30px;">
+                Choose a difficulty level and challenge your speed and focus!
+            </p>
+            <div class="slgo" style="display: flex; align-items: flex-start; gap: 20px;">
+                <select id="level">
+                    <option value="" disabled selected>Level</option>
+                    <option value="easy">Easy </option>
+                    <option value="medium">Medium </option>
+                    <option value="hard">Hard </option>
+                </select>
+                <input type="submit" id="start" value="Start Game">
+            </div>
+        </div>
+        <div id="game">
+
+            <table class="tab">
+            </table>
+
+            <div id="infos">
+                <span id="minuteur"></span>
+                <img id="sablier" src="images/chrono1.gif" alt="sablier" style="display:none;
+                     width:40px; 
+                     height:40px; 
+                     vertical-align: middle; 
+                     margin-bottom: 7px;">
+                <img id="alarme" src="images/alarme1.gif" alt="alarme" style="display:none;
+                     width:30px; 
+                     height:30px; 
+                     vertical-align: middle; 
+                     margin-bottom: 7px;">
+                <img id="outt" src="images/sad1.gif" alt="sad1" style="display:none;
+                     width:30px; 
+                     height:30px; 
+                     vertical-align: middle; 
+                     margin-bottom: 7px;">
+
+                <br /><br />
+                <span id="score"></span>
+                <br /><br />
+                <button id="stopp">Stop</button>
+                <br />
+                <span id="finalScore"></span>
+                <img id="trophy" src="images/win1.gif" alt="trophy" style="display:none;
+                     width:40px; 
+                     height:40px; 
+                     vertical-align: middle; 
+                     margin-bottom: 7px;">
+                <img id="sad" src="images/lose1.gif" alt="sad" style="display:none;
+                     width:40px; 
+                     height:40px; 
+                     vertical-align: middle; 
+                     margin-bottom: 7px;">
+                <img id="perfect" src="images/first.gif" alt="perfect" style="display:none;  
+                     width:40px; 
+                     height:40px; 
+                     vertical-align: middle; 
+                     margin-bottom: 7px;">
+                <br />
+
+            </div>
+        </div>
+
+
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
