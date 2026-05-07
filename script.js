@@ -206,9 +206,9 @@ start.addEventListener("click", function () {
                 temp = 30;
                 break;
             case "hard":
-                rows = 6;
-                cols = 6;
-                temp = 50;
+                rows = 10;
+                cols = 10;
+                temp = 0;
                 break;
             default:
                 return home.click();
@@ -219,12 +219,12 @@ start.addEventListener("click", function () {
             case "easy":
                 rows = 5;
                 cols = 5;
-                temp = 130;
+                temp = 30;
                 break;
             case "medium":
                 rows = 7;
                 cols = 7;
-                temp = 800;
+                temp = 80;
                 break;
             case "hard":
                 rows = 10;
@@ -280,6 +280,7 @@ stopp.addEventListener("click", function () {
     home.style.display = "inline";
     stopp.style.display = "none";
     outt.style.display = "inline-block";
+    alarme.style.display = "none";
 
     if (score >= (rows * cols) - 5 && score < rows * cols) {
         finalScore.textContent += " You win!";
@@ -332,6 +333,7 @@ regen.addEventListener("click", function () {
     sad.style.display = "none";
     trophy.style.display = "none";
     outt.style.display = "none";
+    alarme.style.display = "none";
 
 
 
@@ -372,4 +374,5 @@ home.addEventListener("click", function () {
     sad.style.display = "none";
     trophy.style.display = "none";
     outt.style.display = "none";
+    alarme.style.display = "none";
 });
